@@ -18,7 +18,16 @@ export default function Home() {
   }
 
   const scrollToContact = () => {
-    document.getElementById("contact-section")?.scrollIntoView({ behavior: "smooth" })
+    const contactSection = document.getElementById("contact")
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" })
+    } else {
+      // Fallback: try to find any contact form
+      const contactForm = document.querySelector('[id*="contact"]')
+      if (contactForm) {
+        contactForm.scrollIntoView({ behavior: "smooth" })
+      }
+    }
   }
 
   return (
@@ -307,7 +316,7 @@ export default function Home() {
         </div>
       </div>
 
-      <ContactSection id="contact-section" />
+      <ContactSection />
     </div>
   )
 }

@@ -68,10 +68,13 @@ const Navigation = () => {
       </div>
       <button
         onClick={() => {
+          console.log("Contact Me button clicked") // Add this for debugging
           const contactSection = document.getElementById("contact")
           if (contactSection) {
+            console.log("Found contact section, scrolling...") // Add this for debugging
             contactSection.scrollIntoView({ behavior: "smooth" })
           } else {
+            console.log("Contact section not found, trying mailto fallback") // Add this for debugging
             // Fallback to mailto if no contact section exists
             window.location.href = "mailto:steve@gtmvp.com"
           }
