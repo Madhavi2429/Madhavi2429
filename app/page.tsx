@@ -271,8 +271,8 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white">Product Development Showcase</h2>
             <p className="mt-4 text-xl text-blue-100 max-w-3xl mx-auto">
-              Examples of custom software products and platforms I've built for clients — from AI-powered analytics
-              tools to comprehensive go-to-market platforms that solve real-world business challenges.
+              Examples of custom software products and platforms I've built for clients — from AI-powered healthcare
+              platforms to comprehensive analytics tools that solve real-world business challenges.
             </p>
           </div>
 
@@ -288,7 +288,7 @@ export default function Home() {
                 <div className="flex justify-between items-center">
                   <div>
                     <h3 className="text-lg font-bold text-gray-900">GTMVP</h3>
-                    <p className="text-gray-600 text-sm">Go-to-Market Platform</p>
+                    <p className="text-gray-600 text-sm">AI Healthcare SaaS Platform</p>
                   </div>
                   <ChevronRight className="h-5 w-5 text-blue-600" />
                 </div>
@@ -305,7 +305,7 @@ export default function Home() {
               <div className="p-4">
                 <div className="flex justify-between items-center">
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900">Docdoctor</h3>
+                    <h3 className="text-lg font-bold text-gray-900">DocDoctor</h3>
                     <p className="text-gray-600 text-sm">AI Healthcare Assistant</p>
                   </div>
                   <ChevronRight className="h-5 w-5 text-blue-600" />
