@@ -320,7 +320,7 @@ export default function Home() {
               <div className="h-32 bg-gray-100 flex items-center justify-center">
                 <Image
                   src="/images/patientsat.png"
-                  alt="Patientsat.AI"
+                  alt="PatientSAT.AI"
                   width={120}
                   height={60}
                   className="object-contain"
@@ -329,7 +329,7 @@ export default function Home() {
               <div className="p-4">
                 <div className="flex justify-between items-center">
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900">Patientsat.AI</h3>
+                    <h3 className="text-lg font-bold text-gray-900">PatientSAT.AI</h3>
                     <p className="text-gray-600 text-sm">Patient Satisfaction Analytics</p>
                   </div>
                   <ChevronRight className="h-5 w-5 text-blue-600" />

@@ -145,7 +145,7 @@ const Page = () => {
             <CardHeader>
               <div className="w-full h-[200px] md:h-[250px] bg-gradient-to-br from-blue-50 to-cyan-100 flex justify-center items-center rounded-lg relative overflow-hidden">
                 <Image
-                  alt="Patientsat.AI"
+                  alt="PatientSAT.AI"
                   className="object-contain"
                   src={"/images/patientsat.png"}
                   width={240}
@@ -156,7 +156,7 @@ const Page = () => {
             <CardContent className="space-y-4">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="font-bold text-xl md:text-2xl text-gray-900">Patientsat.AI</h3>
+                  <h3 className="font-bold text-xl md:text-2xl text-gray-900">PatientSAT.AI</h3>
                   <p className="text-[#1570ef] font-medium">Patient Satisfaction Analytics</p>
                 </div>
                 <ArrowRight className="w-6 h-6 text-[#1570ef]" />
@@ -354,7 +354,7 @@ const Page = () => {
           <div className="w-full md:w-1/2">
             <div className="relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-cyan-50 to-blue-100 flex items-center justify-center">
               <Image
-                alt="Patientsat.AI Analytics Platform"
+                alt="PatientSAT.AI Analytics Platform"
                 className="object-contain"
                 src={"/images/patientsat.png"}
                 width={360}
@@ -369,7 +369,7 @@ const Page = () => {
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Real-Time Patient Satisfaction Analytics</h2>
               <p className="text-gray-600 md:text-lg">
-                Patientsat.AI transforms patient feedback into actionable insights, helping healthcare providers
+                PatientSAT.AI transforms patient feedback into actionable insights, helping healthcare providers
                 continuously improve patient experiences through advanced analytics and real-time monitoring.
               </p>
             </div>
