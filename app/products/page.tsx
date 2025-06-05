@@ -39,7 +39,7 @@ const Page = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {/* GTMVP */}
           <Card
             onClick={() => handleExternalNavigation("https://www.gtmvp.com")}
@@ -60,13 +60,13 @@ const Page = () => {
               <div className="flex justify-between items-start">
                 <div>
                   <h3 className="font-bold text-xl md:text-2xl text-gray-900">GTMVP</h3>
-                  <p className="text-[#1570ef] font-medium">Go-to-Market Validation Platform</p>
+                  <p className="text-[#1570ef] font-medium">Go-to-Market Platform</p>
                 </div>
                 <ArrowRight className="w-6 h-6 text-[#1570ef]" />
               </div>
               <p className="text-gray-600">
                 Productive Media Buys | Big Data Analytics | Control Your Destiny. A comprehensive platform for
-                validating and optimizing your go-to-market strategy with AI-powered insights.
+                validating and optimizing your go-to-market strategy.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Media Optimization</span>
@@ -96,7 +96,7 @@ const Page = () => {
               <div className="flex justify-between items-start">
                 <div>
                   <h3 className="font-bold text-xl md:text-2xl text-gray-900">Docdoctor</h3>
-                  <p className="text-[#1570ef] font-medium">AI-Powered Market Research</p>
+                  <p className="text-[#1570ef] font-medium">AI Market Research</p>
                 </div>
                 <ArrowRight className="w-6 h-6 text-[#1570ef]" />
               </div>
@@ -115,26 +115,66 @@ const Page = () => {
             </CardContent>
           </Card>
 
+          {/* Patientsat.AI */}
+          <Card
+            onClick={() => handleExternalNavigation("https://www.patientsat.ai")}
+            className="hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-[#1570ef]"
+          >
+            <CardHeader>
+              <div className="w-full h-[200px] md:h-[250px] bg-gradient-to-br from-blue-50 to-cyan-100 flex justify-center items-center rounded-lg relative overflow-hidden">
+                <Image
+                  alt="Patientsat.AI"
+                  className="object-contain"
+                  src={"/images/patientsat.png"}
+                  width={240}
+                  height={120}
+                />
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="font-bold text-xl md:text-2xl text-gray-900">Patientsat.AI</h3>
+                  <p className="text-[#1570ef] font-medium">Patient Satisfaction Analytics</p>
+                </div>
+                <ArrowRight className="w-6 h-6 text-[#1570ef]" />
+              </div>
+              <p className="text-gray-600">
+                AI-powered patient satisfaction analytics platform that helps healthcare providers improve patient
+                experiences through real-time feedback analysis and actionable insights.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Healthcare AI</span>
+                <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Patient Analytics</span>
+                <span className="px-3 py-1 bg-cyan-100 text-cyan-800 rounded-full text-sm">Real-time Insights</span>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                <p className="text-green-800 text-sm font-medium">🏥 Healthcare Focused</p>
+              </div>
+            </CardContent>
+          </Card>
+
           {/* StudentAIDetector */}
           <Card
-            onClick={() => handleExternalNavigation("https://studentaidetector.com")}
+            onClick={() => handleExternalNavigation("https://www.studentaidetector.com")}
             className="hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-[#1570ef]"
           >
             <CardHeader>
               <div className="w-full h-[200px] md:h-[250px] bg-gradient-to-br from-purple-50 to-violet-100 flex justify-center items-center rounded-lg relative overflow-hidden">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[#4f46e5] rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-white font-bold text-xl">AI</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-[#4f46e5]">StudentAIDetector</h3>
-                </div>
+                <Image
+                  alt="StudentAIDetector"
+                  className="object-contain"
+                  src={"/images/studentaidetector.png"}
+                  width={240}
+                  height={120}
+                />
               </div>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex justify-between items-start">
                 <div>
                   <h3 className="font-bold text-xl md:text-2xl text-gray-900">StudentAIDetector</h3>
-                  <p className="text-[#1570ef] font-medium">AI Content Detection Platform</p>
+                  <p className="text-[#1570ef] font-medium">AI Content Detection</p>
                 </div>
                 <ArrowRight className="w-6 h-6 text-[#1570ef]" />
               </div>
@@ -159,12 +199,13 @@ const Page = () => {
       <div className="w-full px-3 md:px-24 py-12 md:py-20">
         <div className="flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto">
           <div className="w-full md:w-1/2">
-            <div className="relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden">
+            <div className="relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-50 to-cyan-100 flex items-center justify-center">
               <Image
-                alt="Docdoctor AI Healthcare Solutions"
+                alt="Patientsat.AI Healthcare Solutions"
                 className="object-contain"
-                src={"/images/docdoctor.svg"}
-                fill
+                src={"/images/patientsat.png"}
+                width={360}
+                height={180}
               />
             </div>
           </div>

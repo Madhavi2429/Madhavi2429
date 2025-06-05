@@ -276,21 +276,21 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div
               className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
               onClick={() => handleExternalNavigation("https://www.gtmvp.com")}
             >
-              <div className="h-48 bg-gray-100 flex items-center justify-center">
-                <Image src="/images/gtmvp.svg" alt="GTMVP" width={200} height={80} className="object-contain" />
+              <div className="h-32 bg-gray-100 flex items-center justify-center">
+                <Image src="/images/gtmvp.svg" alt="GTMVP" width={120} height={60} className="object-contain" />
               </div>
-              <div className="p-6">
+              <div className="p-4">
                 <div className="flex justify-between items-center">
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900">GTMVP</h3>
-                    <p className="text-gray-600">Productive Media Buys | Big Data | Control your destiny</p>
+                    <h3 className="text-lg font-bold text-gray-900">GTMVP</h3>
+                    <p className="text-gray-600 text-sm">Go-to-Market Platform</p>
                   </div>
-                  <ChevronRight className="h-6 w-6 text-blue-600" />
+                  <ChevronRight className="h-5 w-5 text-blue-600" />
                 </div>
               </div>
             </div>
@@ -299,16 +299,64 @@ export default function Home() {
               className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
               onClick={() => handleExternalNavigation("https://www.docdoctor.ai")}
             >
-              <div className="h-48 bg-gray-100 flex items-center justify-center">
-                <Image src="/images/docdoctor.svg" alt="Docdoctor" width={200} height={80} className="object-contain" />
+              <div className="h-32 bg-gray-100 flex items-center justify-center">
+                <Image src="/images/docdoctor.svg" alt="Docdoctor" width={120} height={60} className="object-contain" />
               </div>
-              <div className="p-6">
+              <div className="p-4">
                 <div className="flex justify-between items-center">
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900">Docdoctor</h3>
-                    <p className="text-gray-600">Exhaustive Market Research. Refreshed Every 15 Minutes.</p>
+                    <h3 className="text-lg font-bold text-gray-900">Docdoctor</h3>
+                    <p className="text-gray-600 text-sm">AI Market Research</p>
                   </div>
-                  <ChevronRight className="h-6 w-6 text-blue-600" />
+                  <ChevronRight className="h-5 w-5 text-blue-600" />
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+              onClick={() => handleExternalNavigation("https://www.patientsat.ai")}
+            >
+              <div className="h-32 bg-gray-100 flex items-center justify-center">
+                <Image
+                  src="/images/patientsat.png"
+                  alt="Patientsat.AI"
+                  width={120}
+                  height={60}
+                  className="object-contain"
+                />
+              </div>
+              <div className="p-4">
+                <div className="flex justify-between items-center">
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900">Patientsat.AI</h3>
+                    <p className="text-gray-600 text-sm">Patient Satisfaction Analytics</p>
+                  </div>
+                  <ChevronRight className="h-5 w-5 text-blue-600" />
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+              onClick={() => handleExternalNavigation("https://www.studentaidetector.com")}
+            >
+              <div className="h-32 bg-gray-100 flex items-center justify-center">
+                <Image
+                  src="/images/studentaidetector.png"
+                  alt="StudentAIDetector"
+                  width={120}
+                  height={60}
+                  className="object-contain"
+                />
+              </div>
+              <div className="p-4">
+                <div className="flex justify-between items-center">
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900">StudentAIDetector</h3>
+                    <p className="text-gray-600 text-sm">AI Content Detection</p>
+                  </div>
+                  <ChevronRight className="h-5 w-5 text-blue-600" />
                 </div>
               </div>
             </div>
