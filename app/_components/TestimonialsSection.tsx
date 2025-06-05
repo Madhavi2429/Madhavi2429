@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 const testimonials = [
   {
     quote:
@@ -6,6 +8,7 @@ const testimonials = [
     role: "CMO",
     company: "Facia",
     metrics: { value: "247%", label: "Increase in qualified leads" },
+    image: "/images/sarah-johnson.jpg",
   },
   {
     quote:
@@ -14,6 +17,7 @@ const testimonials = [
     role: "VP of Marketing",
     company: "TheKYB",
     metrics: { value: "68%", label: "Reduction in CAC" },
+    image: "/images/michael-chen.jpg",
   },
   {
     quote:
@@ -47,14 +51,26 @@ export default function TestimonialsSection() {
               <blockquote className="text-gray-700 mb-6">"{testimonial.quote}"</blockquote>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                  <span className="text-blue-600 font-semibold text-lg">
-                    {testimonial.author
-                      .split(" ")
-                      .map((n) => n[0])
-                      .join("")}
-                  </span>
-                </div>
+                {testimonial.image ? (
+                  <div className="w-12 h-12 rounded-full overflow-hidden">
+                    <Image
+                      src={testimonial.image || "/placeholder.svg"}
+                      alt={testimonial.author}
+                      width={48}
+                      height={48}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                ) : (
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                    <span className="text-blue-600 font-semibold text-lg">
+                      {testimonial.author
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")}
+                    </span>
+                  </div>
+                )}
                 <div>
                   <div className="font-semibold text-gray-900">{testimonial.author}</div>
                   <div className="text-gray-600 text-sm">
