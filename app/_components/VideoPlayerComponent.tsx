@@ -34,8 +34,16 @@ export default function VideoPlayerComponent({ className = "", size = "lg" }: Vi
     setIsModalOpen(false)
   }
 
-  // Handle escape key to close modal
   useEffect(() => {
+    // Preload video when component mounts
+    if (typeof window !== "undefined") {
+      const link = document.createElement("link")
+      link.rel = "preload"
+      link.href = "https://www.loom.com/embed/4d9ccdb76a9240bb9747d15c430ef2ca"
+      link.as = "document"
+      document.head.appendChild(link)
+    }
+
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setIsModalOpen(false)
@@ -65,7 +73,8 @@ export default function VideoPlayerComponent({ className = "", size = "lg" }: Vi
             alt="Steve Kaplan Profile"
             fill
             className="object-cover transition-all duration-300 group-hover:brightness-90"
-            priority
+            priority={true}
+            loading="eager"
           />
 
           {/* Gradient Overlay */}
@@ -75,16 +84,31 @@ export default function VideoPlayerComponent({ className = "", size = "lg" }: Vi
         {/* Play Button Overlay */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="relative">
-            {/* Pulsing Ring */}
-            <div className="absolute inset-0 bg-white/30 rounded-full animate-ping" />
-            <div className="absolute inset-0 bg-white/20 rounded-full animate-pulse" />
+            {/* Animated Wave Rings */}
+            <div className="absolute inset-0 rounded-full">
+              {/* First wave ring */}
+              <div
+                className="absolute inset-0 rounded-full border-2 border-white/30 animate-ping"
+                style={{ animationDuration: "2s", animationDelay: "0s" }}
+              />
+              {/* Second wave ring */}
+              <div
+                className="absolute inset-0 rounded-full border-2 border-white/20 animate-ping"
+                style={{ animationDuration: "2s", animationDelay: "0.5s" }}
+              />
+              {/* Third wave ring */}
+              <div
+                className="absolute inset-0 rounded-full border border-white/15 animate-ping"
+                style={{ animationDuration: "2s", animationDelay: "1s" }}
+              />
+            </div>
 
-            {/* Play Button */}
+            {/* Play Button - more subtle and elegant */}
             <div
-              className={`relative ${playIconSizes[size]} bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg transition-all duration-300 group-hover:bg-white group-hover:scale-110`}
+              className={`relative ${playIconSizes[size]} bg-black/40 backdrop-blur-sm rounded-full flex items-center justify-center shadow-md transition-all duration-300 group-hover:bg-black/60 group-hover:scale-105 border border-white/20`}
             >
               <Play
-                className={`${playIconSizes[size]} text-blue-600 fill-current ml-1 transition-colors duration-300 group-hover:text-blue-700`}
+                className={`${playIconSizes[size]} text-white/80 fill-current ml-1 transition-colors duration-300 group-hover:text-white`}
               />
             </div>
           </div>
@@ -120,12 +144,13 @@ export default function VideoPlayerComponent({ className = "", size = "lg" }: Vi
             <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl">
               <div className="aspect-video">
                 <iframe
-                  src="https://www.loom.com/embed/4d9ccdb76a9240bb9747d15c430ef2ca?sid=fe52238c-f775-447c-b97c-0b3f815ddaf5&hideEmbedTopBar=true&autoplay=1"
+                  src="https://www.loom.com/embed/4d9ccdb76a9240bb9747d15c430ef2ca?sid=fe52238c-f775-447c-b97c-0b3f815ddaf5&hideEmbedTopBar=true&autoplay=1&preload=metadata"
                   frameBorder="0"
                   allowFullScreen
                   allow="autoplay; fullscreen"
                   className="w-full h-full"
                   title="Steve Kaplan Introduction Video"
+                  loading="eager"
                 />
               </div>
             </div>
