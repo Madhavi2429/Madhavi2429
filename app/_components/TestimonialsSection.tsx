@@ -26,6 +26,7 @@ const testimonials = [
     role: "Founder",
     company: "AMLWatcher",
     metrics: { value: "3.2x", label: "ROI on marketing spend" },
+    image: "/images/emily-rodriguez.jpg",
   },
 ]
 
