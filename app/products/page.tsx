@@ -76,7 +76,7 @@ const Page = () => {
             </CardContent>
           </Card>
 
-          {/* Docdoctor */}
+          {/* DocDoctor */}
           <Card
             onClick={() => handleExternalNavigation("https://www.docdoctor.ai")}
             className="hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-[#1570ef]"
@@ -84,7 +84,7 @@ const Page = () => {
             <CardHeader>
               <div className="w-full h-[200px] md:h-[250px] bg-gradient-to-br from-green-50 to-emerald-100 flex justify-center items-center rounded-lg relative overflow-hidden">
                 <Image
-                  alt="Docdoctor AI"
+                  alt="DocDoctor AI"
                   className="object-contain"
                   src={"/images/docdoctor.svg"}
                   width={180}
@@ -95,22 +95,23 @@ const Page = () => {
             <CardContent className="space-y-4">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="font-bold text-xl md:text-2xl text-gray-900">Docdoctor</h3>
-                  <p className="text-[#1570ef] font-medium">AI Market Research</p>
+                  <h3 className="font-bold text-xl md:text-2xl text-gray-900">DocDoctor</h3>
+                  <p className="text-[#1570ef] font-medium">AI Healthcare Assistant</p>
                 </div>
                 <ArrowRight className="w-6 h-6 text-[#1570ef]" />
               </div>
               <p className="text-gray-600">
-                Exhaustive Market Research. Refreshed Every 15 Minutes. Get real-time market insights and competitive
-                intelligence powered by AI.
+                AI-powered healthcare platform designed to assist doctors with clinical decision-making, patient care
+                optimization, and medical workflow automation. Enhancing healthcare delivery through intelligent
+                technology.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Market Research</span>
-                <span className="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Real-time Data</span>
-                <span className="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">AI Analytics</span>
+                <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Healthcare AI</span>
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Clinical Support</span>
+                <span className="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm">Doctor Assistant</span>
               </div>
-              <div className="bg-orange-50 border border-orange-200 rounded-lg p-3">
-                <p className="text-orange-800 text-sm font-medium">🚀 Closed Beta Starts 4-20</p>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                <p className="text-green-800 text-sm font-medium">🩺 Healthcare Innovation</p>
               </div>
             </CardContent>
           </Card>
@@ -199,11 +200,11 @@ const Page = () => {
       <div className="w-full px-3 md:px-24 py-12 md:py-20">
         <div className="flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto">
           <div className="w-full md:w-1/2">
-            <div className="relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-50 to-cyan-100 flex items-center justify-center">
+            <div className="relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-green-50 to-emerald-100 flex items-center justify-center">
               <Image
-                alt="Patientsat.AI Healthcare Solutions"
+                alt="DocDoctor AI Healthcare Solutions"
                 className="object-contain"
-                src={"/images/patientsat.png"}
+                src={"/images/docdoctor.svg"}
                 width={360}
                 height={180}
               />
@@ -211,10 +212,12 @@ const Page = () => {
           </div>
           <div className="w-full md:w-1/2 space-y-6">
             <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Transforming Healthcare with AI</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                Empowering Healthcare Professionals with AI
+              </h2>
               <p className="text-gray-600 md:text-lg">
-                Our AI solutions are specifically designed for healthcare and health tech companies, helping them
-                improve patient outcomes while optimizing operations.
+                Our AI solutions are specifically designed for healthcare professionals and institutions, helping
+                doctors make better clinical decisions while improving patient care and operational efficiency.
               </p>
             </div>
 
@@ -222,22 +225,24 @@ const Page = () => {
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                 <div>
-                  <h4 className="font-semibold text-gray-900">Patient Experience Optimization</h4>
-                  <p className="text-gray-600">AI-driven insights to enhance patient journeys and satisfaction.</p>
+                  <h4 className="font-semibold text-gray-900">Clinical Decision Support</h4>
+                  <p className="text-gray-600">
+                    AI-powered tools to assist doctors with diagnosis and treatment planning.
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                 <div>
-                  <h4 className="font-semibold text-gray-900">Operational Efficiency</h4>
-                  <p className="text-gray-600">Streamline healthcare operations with intelligent automation.</p>
+                  <h4 className="font-semibold text-gray-900">Patient Care Optimization</h4>
+                  <p className="text-gray-600">Streamline patient workflows and improve care delivery outcomes.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                 <div>
-                  <h4 className="font-semibold text-gray-900">Data-Driven Decisions</h4>
-                  <p className="text-gray-600">Transform healthcare data into actionable business insights.</p>
+                  <h4 className="font-semibold text-gray-900">Medical Workflow Automation</h4>
+                  <p className="text-gray-600">Reduce administrative burden and enhance healthcare efficiency.</p>
                 </div>
               </div>
             </div>

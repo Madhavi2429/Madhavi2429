@@ -1,10 +1,12 @@
 "use client"
 
 import type React from "react"
-
+import { useRouter } from "next/navigation"
 import ContactForm from "./ContactForm"
 
 export default function ContactSection() {
+  const router = useRouter()
+
   const handleEmailClick = (e: React.MouseEvent) => {
     e.preventDefault()
 
@@ -26,6 +28,13 @@ export default function ContactSection() {
       document.body.removeChild(tempLink)
       showEmailFallback()
     }
+  }
+
+  const handleScheduleClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+
+    // Use Next.js router to navigate with hash
+    router.push("/services#schedule")
   }
 
   const showEmailFallback = () => {
@@ -108,9 +117,9 @@ Or try opening your email client manually and compose a new message.`)
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Schedule a Call</h3>
-                  <a href="#" className="text-blue-600 hover:underline">
+                  <button onClick={handleScheduleClick} className="text-blue-600 hover:underline cursor-pointer">
                     Book a 15-minute discovery call
-                  </a>
+                  </button>
                 </div>
               </div>
 

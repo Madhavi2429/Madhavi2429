@@ -4,6 +4,8 @@ import ServiceDetail from "../_components/ServiceDetail"
 import ProcessSection from "../_components/ProcessSection"
 import TestimonialsSection from "../_components/TestimonialsSection"
 import CalendarEmbed from "../_components/CalendarEmbed"
+import { useEffect } from "react"
+import { useRouter } from "next/navigation"
 
 const services = [
   {
@@ -101,6 +103,36 @@ const meetingTypes = [
 ]
 
 const Page = () => {
+  const router = useRouter()
+
+  // Handle hash fragment scrolling when page loads
+  useEffect(() => {
+    const handleHashScroll = () => {
+      const hash = window.location.hash
+      if (hash) {
+        // Remove the # from the hash
+        const elementId = hash.substring(1)
+        const element = document.getElementById(elementId)
+        if (element) {
+          // Use setTimeout to ensure the page is fully rendered
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: "smooth", block: "start" })
+          }, 300) // Increased timeout for better reliability
+        }
+      }
+    }
+
+    // Handle initial load
+    handleHashScroll()
+
+    // Handle hash changes (for navigation within the same page)
+    window.addEventListener("hashchange", handleHashScroll)
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashScroll)
+    }
+  }, [])
+
   const scrollToServices = () => {
     const servicesSection = document.getElementById("services")
     if (servicesSection) {
@@ -120,7 +152,7 @@ const Page = () => {
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: "smooth" })
     } else {
-      window.location.href = "/#contact"
+      router.push("/#contact")
     }
   }
 

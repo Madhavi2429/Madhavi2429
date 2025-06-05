@@ -306,7 +306,7 @@ export default function Home() {
                 <div className="flex justify-between items-center">
                   <div>
                     <h3 className="text-lg font-bold text-gray-900">Docdoctor</h3>
-                    <p className="text-gray-600 text-sm">AI Market Research</p>
+                    <p className="text-gray-600 text-sm">AI Healthcare Assistant</p>
                   </div>
                   <ChevronRight className="h-5 w-5 text-blue-600" />
                 </div>
